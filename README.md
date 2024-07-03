@@ -49,14 +49,15 @@ The application works by using information gained from a combination of user inp
 
 #### V. Local Development
 
-1. Install Required Software:
-   - Python 3 (Latest Version)
-   - Anaconda/Miniconda (Optional)
-   - Node Version Manager, or the LTS version of NPM
-   - Git (Latest Version)
-   - MongoDB (Local or Remote via Atlas)
+##### 1. Install Required Software
 
-2. Prepare the Local Environment:
+- Python 3 (Latest Version)
+- Anaconda/Miniconda (Optional)
+- Node Version Manager, or the LTS version of NPM
+  - Git (Latest Version)
+  - MongoDB (Local or Remote via Atlas)
+
+###### 2. Prepare the Local Environment
 
 ```shell
 # Navigate to your preferred directory, then clone and enter the repository:
@@ -88,9 +89,10 @@ npm run dev_server
 npm run deploy
 ```
 
-3 Integrate Your Contributions
-    - Please ensure the names of your commits and branches conform to the guidelines set by our [contribution policy](https://github.com/G0dking/coldCaller/POLICY.md).
-    - To submit your changes for review, submit an official Pull Request after running the following commands:
+###### 3. Integrate Your Contributions
+
+- Please ensure the names of your commits and branches conform to the guidelines set by our [contribution policy](https://github.com/G0dking/coldCaller/POLICY.md).
+- To submit your changes for review, submit an official Pull Request after running the following commands:
 
 ```shell
 cd ~/coldCaller     # modify as needed to reflect the root directory of your local cloned repository

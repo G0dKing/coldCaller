@@ -2,6 +2,7 @@
 
 _load_scraper_vars() {
     echo "Initializing..."
+    sleep 3
     root_dir=/mnt/g/.dev/projects/active/coldCaller
     dir=$root_dir/webscraper
     output_dir=$dir/extracted_files
@@ -14,9 +15,16 @@ _load_scraper_vars() {
 _setup_pyenv() {
     echo "Checking Dependencies..."
     source venv/bin/activate
-    pip3 install -r requirements.txt
-}
 
+    while read -r package; do
+        if pip3 show "$package" >/dev/null 2>&1; then
+            echo "$package is already installed."
+        else
+            echo "Installing $package..."
+            pip3 install "$package"
+        fi
+    done < requirements.txt
+}
 _scrape_links() {
     if [[ -f $links_file ]]; then
         rm -f $links_file
@@ -28,7 +36,7 @@ _scrape_links() {
     while [ ! -f "$links_file" ]; do
         sleep 1
     done
-    echo "Metadata extraction complete."
+    echo "Scraping complete."
     echo
 }
 
